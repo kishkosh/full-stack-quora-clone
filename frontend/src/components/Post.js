@@ -37,7 +37,6 @@ function Post({ post }) {
   const handleQuill = (value) => {
     setAnswer(value);
   };
-  // console.log(answer);
 
   const handleSubmit = async () => {
     if (post?._id && answer !== "") {

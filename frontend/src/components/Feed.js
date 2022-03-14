@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import QuoraBox from "./QuoraBox";
+import BoosterBox from "./BoosterBox";
 import "./css/Feed.css";
 import Post from "./Post";
 import axios from "axios";
@@ -19,15 +19,10 @@ function Feed() {
   }, []);
   return (
     <div className="feed">
-      <QuoraBox />
+      <BoosterBox />
       {posts.map((post, index) => (
         <Post key={index} post={post} />
       ))}
-      {/* <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post /> */}
     </div>
   );
 }

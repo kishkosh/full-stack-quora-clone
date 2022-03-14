@@ -1,34 +1,33 @@
 import React, {useState, useEffect} from "react";
-import "./css/SidebarOptions.css";
+import Post from "./PostQuestionsSubject";
 import axios from "axios";
-import Post from "./PostProject";
 import { Modal } from "react-responsive-modal";
 import CloseIcon from "@material-ui/icons/Close";
 import { selectUser } from "../feature/userSlice";
 import { useSelector } from "react-redux";
 import { Input } from "@material-ui/core";
+import "./css/questionsSubjectContent.css";
 
-
-function SidebarOptions() {
+function QuestionsSubjectContent() {
   const [posts, setPosts] = useState([]);
   const Close = <CloseIcon />;
-  const [project, setproject] = useState("");
+  const [questionsSubject, setquestionsSubject] = useState("");
   const user = useSelector(selectUser);
   const [open, setOpen] = React.useState(false);
 
   const handleSubmit = async () => {
-    if (project !== "") {
+    if (questionsSubject !== "") {
       const config = {
         headers: {
           "Content-Type": "application/json",
         },
       };
       const body = {
-        projectName: project,
+        questionsSubject: questionsSubject,
         user: user,
       };
       await axios
-        .post("/api/projects", body, config)
+        .post("/api/questionsSubject", body, config)
         .then((res) => {
           console.log(res.data);
           alert(res.data.message);
@@ -36,14 +35,14 @@ function SidebarOptions() {
         })
         .catch((e) => {
           console.log(e);
-          alert("Error in adding project");
+          alert("Error in adding questionsSubject");
         });
     }
   };
   
   useEffect(() => {
     axios
-      .get("/api/projects")
+      .get("/api/questionsSubject")
       .then((res) => {
         setPosts(res.data);
       })
@@ -54,7 +53,7 @@ function SidebarOptions() {
 
   return (
     <div className="feed">
-        <button onClick={() => setOpen(true)}>Add Project</button>
+        <button onClick={() => setOpen(true)}>Add Question Subject</button>
     
       {posts.map((post, index) => (
         <Post key={index} post={post} />
@@ -80,17 +79,17 @@ function SidebarOptions() {
            >
            
            <div className="modal__title">
-              <h5>Add Project</h5>
+              <h5>Add Question Subject</h5>
             </div>
             <div className="modal__info">
             
             </div>
             <div className="modal__Field">
               <Input
-                value={project}
-                onChange={(e) => setproject(e.target.value)}
+                value={questionsSubject}
+                onChange={(e) => setquestionsSubject(e.target.value)}
                 type=" text"
-                placeholder="Project Name..."
+                placeholder="Question Subject..."
               />
               <div
                 style={{
@@ -105,7 +104,7 @@ function SidebarOptions() {
                 Cancel
               </button>
               <button onClick={handleSubmit} type="submit" className="add">
-                Add Project
+                Add Question Subject
               </button>
             </div>
           </Modal>
@@ -113,4 +112,4 @@ function SidebarOptions() {
   );
 }
 
-export default SidebarOptions;
+export default QuestionsSubjectContent;

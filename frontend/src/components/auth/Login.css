@@ -5,6 +5,8 @@
   height: 100vh;
   width: 100vw;
   box-sizing: border-box;
+  background:url(https://uploads-ssl.webflow.com/60db0e7fd65cc845024ef6a0/60febb3aaf3e1c033c2b6164_hero-01.jpg) fixed;
+	background-size: cover;
 }
 
 .login-content {
@@ -14,19 +16,22 @@
 }
 
 .login-content > img {
-  width: 200px;
+  width: 300px;
   object-fit: contain;
+  color: #fff;
   margin: 20px;
 }
 
 .login-content > button {
   padding: 10px;
   margin: 50px 0px;
-  background-color: #000;
+  background-color: rgba(0,0,0,0.5);
   color: #fff;
   outline: none;
   border: none;
-  border-radius: 3px;
+  width:150%;
+  height: 150%;
+  border-radius: 20px;
   letter-spacing: 1.1px;
   font-family: monospace;
   cursor: pointer;

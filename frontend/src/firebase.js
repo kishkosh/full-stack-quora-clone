@@ -1,20 +1,16 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
-// import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDArVa0UjpW7PqmrsMWcjsS82QvezLCmg4",
-  authDomain: "quora-clone-mern.firebaseapp.com",
-  projectId: "quora-clone-mern",
-  storageBucket: "quora-clone-mern.appspot.com",
-  messagingSenderId: "182383235813",
-  appId: "1:182383235813:web:fd9e0c34fcc0a4f07c7a0c",
-  measurementId: "G-62KKTN74PZ",
+  apiKey: "AIzaSyAZoEz338GNL8J7w8S-B96z4gF_enHur2w",
+  authDomain: "startupbooster-6d27e.firebaseapp.com",
+  databaseURL: "https://startupbooster-6d27e-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "startupbooster-6d27e",
+  storageBucket: "startupbooster-6d27e.appspot.com",
+  messagingSenderId: "685323668089",
+  appId: "1:685323668089:web:8786dabe8eff7f237f22a8",
+  measurementId: "G-LZJV6KM1V4"
 };
 
 // Initialize Firebase
@@ -22,4 +18,4 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
 
-export { auth, provider };
+export { auth, provider, app };

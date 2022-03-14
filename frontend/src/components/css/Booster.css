@@ -1,28 +1,32 @@
-.quora {
-  width: "100%";
+.Booster {
+  width: 100%;
   min-width: fit-content;
+  background:url(https://uploads-ssl.webflow.com/60db0e7fd65cc845024ef6a0/60febb3aaf3e1c033c2b6164_hero-01.jpg) fixed;
 }
 
-.quora__contents {
+.Booster__contents {
   display: flex;
   justify-content: center;
   padding: 50px 0;
   background-color: rgba(0, 0, 0, 0.05);
-  min-width: fit-content;
+  min-width: fit-content; 
   width: 100%;
 }
 
-.quora__content {
+.Booster__content {
   display: flex;
   flex-direction: row;
   padding: 0px 10px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1200px;  
 }
 
 .react-responsive-modal-modal {
-  width: 90vw;
-  height: 90vh;
+  width: 50vw;
+  height: 70vh;
+  background: rgba(99, 62, 100, 0.75);
+  border-radius:20px;
+  top: 10%;
 }
 
 .quill {

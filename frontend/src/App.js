@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
 import Login from "./components/auth/Login";
-import Quora from "./components/Quora";
+import Booster from "./components/Booster";
 import { login, selectUser } from "./feature/userSlice";
 import { auth } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
@@ -28,8 +28,7 @@ function App() {
   }, [dispatch]);
   return (
     <div className="App">
-      {/* <h1>This is for testing</h1> */}
-      {user ? <Quora /> : <Login />}
+      {user ? <Booster /> : <Login />}
     </div>
   );
 }

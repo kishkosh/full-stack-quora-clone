@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
-  background-color: white;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
   margin-top: 10px;
   border: 1px solid lightgray;
   border-radius: 5px;
@@ -47,7 +48,7 @@
   margin-left: auto;
   cursor: pointer;
   padding: 7px;
-  background-color: #222;
+  background-color: #560078;
   outline: none;
   border: none;
   color: lightgray;
@@ -96,7 +97,7 @@
 }
 
 .post__footerAction {
-  background-color: lightgray;
+  background-color: #560078;
   padding: 5px;
   align-items: center;
   display: flex;
@@ -132,7 +133,7 @@
 }
 
 .modal__question > h1 {
-  color: #8f1f1b;
+  color: black;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -182,7 +183,7 @@
 }
 
 .modal__button > .cancle:hover {
-  color: red;
+  color: black;
 }
 .modal__button > .add {
   border: none;
@@ -202,8 +203,7 @@
 }
 
 .react-responsive-modal-modal {
-  /* width: 600px; */
-  height: 400px;
+  height: 200px;
 }
 
 .quill {

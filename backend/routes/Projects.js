@@ -1,24 +1,21 @@
 const express = require("express");
 const router = express.Router();
 
-const questionDB = require("../models/Question");
+const projectDB = require("../models/Projects");
 
 router.post("/", async (req, res) => {
   console.log(req.body);
 
   try {
-    await questionDB
+    await projectDB
       .create({
-        questionName: req.body.questionName,
-        questionProject: req.body.questionProject,
-        questionsSubject: req.body.questionsSubject,        
-        questionUrl: req.body.questionUrl,
+        projectName: req.body.projectName,
         user: req.body.user,
       })
       .then(() => {
         res.status(201).send({
           status: true,
-          message: "Question added successfully",
+          message: "Project added successfully",
         });
       })
       .catch((err) => {
@@ -30,21 +27,21 @@ router.post("/", async (req, res) => {
   } catch (e) {
     res.status(500).send({
       status: false,
-      message: "Error while adding question",
+      message: "Error while adding project",
     });
   }
 });
 
 router.get("/", async (req, res) => {
   try {
-    await questionDB
+    await projectDB
       .aggregate([
         {
           $lookup: {
-            from: "answers", //collection to join
+            from: "projects", //collection to join
             localField: "_id", //field from input document
-            foreignField: "questionId",
-            as: "allAnswers", //output array field
+            foreignField: "projectId",
+            as: "allprojects", //output array field
           },
         },
       ])
@@ -55,7 +52,7 @@ router.get("/", async (req, res) => {
       .catch((error) => {
         res.status(500).send({
           status: false,
-          message: "Unable to get the question details",
+          message: "Unable to get the project details",
         });
       });
   } catch (e) {

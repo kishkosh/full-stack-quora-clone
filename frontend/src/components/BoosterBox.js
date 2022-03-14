@@ -2,20 +2,20 @@ import { Avatar } from "@material-ui/core";
 import React from "react";
 import { useSelector } from "react-redux";
 import { selectUser } from "../feature/userSlice";
-import "./css/QuoraBox.css";
+import "./css/BoosterBox.css";
 
-function QuoraBox() {
+function BoosterBox() {
   const user = useSelector(selectUser);
   return (
-    <div className="quoraBox">
-      <div className="quoraBox__info">
+    <div className="BoosterBox">
+      <div className="BoosterBox__info">
         <Avatar src={user?.photo} />
       </div>
-      <div className="quoraBox__quora">
+      <div className="BoosterBox__Booster">
         <h5>What is your question or link?</h5>
       </div>
     </div>
   );
 }
 
-export default QuoraBox;
+export default BoosterBox;

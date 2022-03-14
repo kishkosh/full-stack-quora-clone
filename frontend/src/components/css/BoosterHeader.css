@@ -1,12 +1,11 @@
 .qHeader {
   display: flex;
   align-items: center;
-  background-color: #fff;
+  background-color:black;
   position: sticky;
   z-index: 1000;
   top: 0px;
-  /* box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 0.5); */
-  box-shadow: 2px 3px 6px rgba(187, 187, 187, 0.5);
+  box-shadow: 2px 3px 6px rgba(0,0,0,0.5);
   justify-content: center;
   padding: 3px;
 }
@@ -15,7 +14,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding: 5px; */
 }
 
 .qHeader__logo > img {
@@ -48,25 +46,6 @@
   color: #000;
 }
 
-/* .qHeader__icons {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-.qHeader__icons > .active > .MuiSvgIcon-root {
-  color: #8f1f1b;
-}
-.qHeader__icon > .MuiSvgIcon-root {
-  font-size: xx-large;
-  padding: 5px 20px;
-  color: gray;
-}
-.qHeader__icon > .MuiSvgIcon-root:hover {
-  background-color: rgba(233, 233, 233, 0.5);
-  border-radius: 10px;
-  color: #b92b27;
-} */
-
 .qHeader__input {
   display: flex;
   align-items: center;
@@ -80,7 +59,7 @@
   background-color: transparent;
   outline: none;
   border: none;
-  color: rgb(49, 49, 49);
+  color: white;
 }
 
 .qHeader__input > .MuiSvgIcon-root {
@@ -108,7 +87,7 @@
 
 .qHeader__Rem > .MuiButton-root {
   color: white;
-  background: #222;
+  background: #560078;
   text-transform: inherit;
   border-radius: 5px;
   margin-left: 25px;
@@ -135,7 +114,7 @@
 }
 
 .modal__title > h5:hover {
-  color: #b92b27;
+  color: black;
 }
 
 .modal__info {
@@ -201,7 +180,7 @@
 }
 
 .modal__buttons > .cancle:hover {
-  color: red;
+  color: black;
 }
 
 .modal__buttons > .add {
@@ -231,3 +210,75 @@
     display: none;
   }
 }
+
+window_header_style {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    font: 2rem/2 sans-serif;
+    text-align: center;
+    background: purple;
+    color: white;
+}
+
+/* Dropdown Button */
+#dropProject {
+  display: flex;
+  background-color:rgb(230, 230, 230);;
+  color:rgb(98, 98, 98);
+  padding: 4px;
+  font-size: 16px;
+  border: none;
+  margin-left: 10px;
+  border-radius: 33px;
+  align-items: center;
+  cursor: pointer;
+}
+
+#dropQuestionSubject {
+  display: flex;
+  background-color:rgb(230, 230, 230);;
+  color:rgb(98, 98, 98);
+  padding: 4px;
+  font-size: 16px;
+  border: none;
+  margin-left: 10px;
+  border-radius: 33px;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  left: 20%;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: white}
